@@ -1,0 +1,59 @@
+{
+  "name": "datastruct",
+  "version": "1.0.0",
+  "description": "A data structure for idev",
+  "main": "dist/index.js",
+  "scripts": {
+    "build-server": "babel src --out-dir dist",
+    "build": "npm run clean && npm run build-server",
+    "clean": "rm -rf dist && mkdir dist",
+    "test": "NODE_ENV=test mocha --require @babel/register  --recursive ./src",
+    "start:dev": "nodemon ./src/index.js --exec babel-node",
+    "start": "node dist/app.js",
+    "lint": "eslint '**/*js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idev-org/DataStruct.git"
+  },
+  "keywords": [
+    "data",
+    "structure"
+  ],
+  "author": "Idev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idev-org/DataStruct/issues"
+  },
+  "homepage": "https://github.com/idev-org/DataStruct#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4"
+  }
+}
