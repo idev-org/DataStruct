@@ -76,3 +76,41 @@ const isPalindrome = (word) => {
   return false;
 };
 ```
+
+
+## Linked List
+
+> A brief description
+
+Linked List is a linear data structure which consists of group of nodes in a sequence.
+
+Each node holds its own data and the address of the next node hence forming a chain like structure.
+
+Linked Lists can be used to create trees and graphs.
+
+> usage of the data structure
+
+```js
+// This creates a new instance of a Linked list
+const linkedlist = new LinkedList();
+
+// This adds the string 'hello' as the element of a new node in the list
+linkedlist.add('hello');
+
+// This adds the array as a new node to index 3 in the linkedlist
+linkedlist.add(3, [1, 2, 3, 4]);
+
+// This removes the node with element string 'welcome' from the linked list
+linkedlist.remove('welcome');
+
+// This removes the node at index 3 from the linkedlist
+linkedlist.remove(3);
+
+// This returns the current length of the linkedlist i.e 2
+linkedlist.getSize();
+
+// This returns the head node from the linkedlist without removing it
+linkedlist.getHead();
+
+// This clears all nodes from the linked
+linkedlist.clear();
