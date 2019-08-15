@@ -76,3 +76,45 @@ const isPalindrome = (word) => {
   return false;
 };
 ```
+
+## Set
+
+> A brief description
+
+A Set data structure allows to add data to a container, a collection of objects or primitive types (strings, numbers or booleans), it is like an array except there are no duplicate items and the values are in no particular order.
+
+> Usage of the set data structure
+
+```js
+// Create a new instance of set
+const set = new Set();
+// you can also create an instance of set with an array value
+const set = new Set(['hello', 'hi', 99])
+// add any type of data to the set collection
+set.add('a');
+set.add(2);
+set.add(true);
+
+// remove data from the set collection
+set.remove(2);
+
+// check if a value is available in the set
+set.has('a');
+
+// get all the values in set set
+set.values();
+
+// get the size of the set 
+set.size();
+
+// get the union of two sets
+setA.union(setB);
+
+// get the intersection of two sets
+setA.intersection(setB);
+
+// get the difference between two sets
+setA.difference(setB);
+// check if setA is a subset of setB
+setA.subset(setB);
+```
