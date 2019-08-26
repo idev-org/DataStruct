@@ -1,3 +1,5 @@
-import Stack from './Stack';
+import StackClass from './Stack';
+import LinkedListClass from './LinkedList';
 
-export default Stack;
+export const Stack = new StackClass();
+export const LinkedList = new LinkedListClass();
