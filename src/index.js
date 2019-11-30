@@ -1,3 +1,7 @@
 import Stack from './Stack';
+import Set from './Set';
 
-export default Stack;
+module.export = {
+  Stack,
+  Set,
+};
